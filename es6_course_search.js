@@ -1,4 +1,5 @@
 "use strict"
+
 let courses = [
     {
     CourseId: "PROG100",
@@ -37,42 +38,8 @@ let courses = [
     }
    ];
 
+function search(_courseid){
+ let courseid = courses.find((course) => course.CourseId == _courseid);
+}
 
-
-
-   function isOver60(arrayValue) {
-    if (arrayValue > 60) {
-    return true;
-    }
-    else {
-    return false;
-    }
-   }
-   let numbers = [7, 9, 64, 60, 12, 13, 65, 62];
-   let firstValOver60Position = numbers.findIndex(isOver60); 
-    // returns the index 2
-   if (firstValOver60Position != -1) {
-    console.log("First value over 60 found at position " +
-    firstValOver60Position);
-   }
-   else {
-    console.log("No values over 60");
-   }
-
-   function isOver60(arrayValue) {
-    if (arrayValue > 60) {
-    return true;
-    }
-    else {
-    return false;
-    }
-   }
-   let numbers2 = [7, 9, 64, 60, 12, 13, 67, 66];
-   let allOver60 = numbers2.filter(isOver60); 
-    // returns an array containing [64, 67, 66]
-   if (allOver60.length > 0) {
-    console.log(allOver60); // displays the array
-   }
-   else {
-    console.log("No values over 60");
-   }
+console.log(search('PROG200'))
